@@ -26,7 +26,7 @@ export class ContactComponent implements OnInit {
   public feedbackControl: UntypedFormControl = new UntypedFormControl('', [Validators.required, Validators.maxLength(160)])
   public captchaControl: UntypedFormControl = new UntypedFormControl('', [Validators.required, Validators.pattern('-?[\\d]*')])
   public userIdControl: UntypedFormControl = new UntypedFormControl('', [])
-  public rating: number = 0
+  public rating: number = 1
   public feedback: any = undefined
   public captcha: any
   public captchaId: any
@@ -91,7 +91,7 @@ export class ContactComponent implements OnInit {
     })
   }
 
-  resetForm () {
+   resetForm () {
     this.authorControl.markAsUntouched()
     this.authorControl.markAsPristine()
     this.authorControl.setValue('')

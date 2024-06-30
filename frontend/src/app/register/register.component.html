@@ -14,7 +14,7 @@
 
       <mat-form-field appearance="outline" color="accent">
         <mat-label translate>LABEL_EMAIL</mat-label>
-        <input id="emailControl" [formControl]="emailControl" (focus)="this.error=null" type="text" matInput
+        <input id="emailControl" [formControl]="emailControl" (focus)="this.error=null" type="email" matInput
                aria-label="Email address field">
         <mat-error *ngIf="emailControl.invalid && emailControl.errors.required" translate>MANDATORY_EMAIL</mat-error>
         <mat-error *ngIf="emailControl.invalid && emailControl.errors.email" translate>INVALID_EMAIL</mat-error>

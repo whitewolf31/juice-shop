@@ -48,6 +48,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit () {
     this.securityQuestionService.find(null).subscribe((securityQuestions: any) => {
       this.securityQuestions = securityQuestions
+      this.securityQuestionControl.setValue(this.securityQuestions[0])
     }, (err) => { console.log(err) })
 
     this.formSubmitService.attachEnterKeyHandler('registration-form', 'registerButton', () => { this.save() })
